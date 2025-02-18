@@ -4,7 +4,7 @@ import pytest
 # Ensure this path is correct
 from gpt_researcher import GPTResearcher
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 
 # Define the report types to test
 report_types = [

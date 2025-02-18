@@ -121,7 +121,7 @@ class GenericLLMProvider:
             _check_pkg("langchain_openai")
             from langchain_openai import ChatOpenAI
 
-            llm = ChatOpenAI(openai_api_base='https://api.deepseek.com',
+            llm = ChatOpenAI(openai_api_base=os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1"),
                      openai_api_key=os.environ["DEEPSEEK_API_KEY"],
                      **kwargs
                 )

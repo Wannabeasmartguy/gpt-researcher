@@ -5,7 +5,7 @@ from gpt_researcher.actions.retriever import get_retrievers
 from gpt_researcher.skills.researcher import ResearchConductor
 import pprint
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 
 async def test_scrape_data_by_query():
     # Initialize the Config object

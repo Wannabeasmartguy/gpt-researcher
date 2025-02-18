@@ -134,6 +134,6 @@ async def main(args):
     print(f"Report written to '{artifact_filepath}'")
 
 if __name__ == "__main__":
-    load_dotenv()
+    load_dotenv(override=True)
     args = cli.parse_args()
     asyncio.run(main(args))
